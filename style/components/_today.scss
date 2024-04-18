@@ -1,0 +1,31 @@
+.card-today__list {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+
+  @include xl() {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include md() {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card-today__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 15px;
+
+  background-color: var(--black-alpha-10);
+  border-radius: 20px;
+  padding: 10px;
+  transition: var(--transition-short);
+}
+
+.card-today__item:hover {
+  cursor: pointer;
+  background-color: var(--on-surface-variant);
+}

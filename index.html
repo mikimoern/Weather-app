@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="./favicon.svg" type="image/x-icon" />
+    <title>Weather</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <a href="#" class="nav__logo">
+            <img src="./assets/logo_2.png" width="50" height="32" alt="logo" />
+            <span>Weather</span>
+          </a>
+          <form action="" class="nav__search" id="search">
+            <input
+              type="text"
+              placeholder="Name of city"
+              class="nav__search-input"
+              id="search-input"
+            />
+            <button type="submit" class="nav__search-btn" id="search-btn">
+              Ok
+            </button>
+          </form>
+          <div class="nav__switching">
+            <button class="nav__switching-themes">
+              <img
+                src="./assets/moon-icons.png"
+                alt="Dark mode"
+                class="switching-themes__icon"
+              />
+              <img
+                src="./assets/sun-icons.png"
+                alt="Light mode"
+                class="switching-themes__icon"
+              />
+            </button>
+            <!-- <div class="nav__switching-languages">
+              <select name="languages">
+                <option>EN</option>
+                <option>CS</option>
+                <option>RU</option>
+              </select>
+            </div> -->
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <div class="content">
+          <div class="content-left">
+            <section class="current-weather">
+              <h2 class="card-title">Now</h2>
+              <div class="wrapper">
+                <p class="card-temp">0&deg;C</p>
+                <img
+                  src="./assets/icons/01d.png"
+                  width="64"
+                  height="64"
+                  alt="Overcast Clouds"
+                  class="weather-icon"
+                />
+              </div>
+              <p class="card-desc">Weather decs</p>
+              <div class="wrapper-line"></div>
+              <ul class="card-info">
+                <li class="card-date">
+                  <img src="./assets/calendar.png" alt="calendar" width="15" />
+                  <span id="current-date">Day 1</span>
+                </li>
+                <li class="card-location">
+                  <img src="./assets/location.png" alt="calendar" width="15" />
+                  <span class="location-city">City</span
+                  ><span class="location-country">Coutry</span>
+                </li>
+              </ul>
+            </section>
+            <section class="week-weather">
+              <h2>Week</h2>
+              <div class="wrapper-line"></div>
+              <ul id="week-list">
+                <li class="week-item">
+                  <img
+                    src="./assets/icons/01n.png"
+                    alt="icons"
+                    width="36"
+                    height="36"
+                  />
+                  <span>0&degC</span>
+                  <p>Mounth</p>
+                </li>
+                <li class="week-item">
+                  <img
+                    src="./assets/icons/01n.png"
+                    alt="icons"
+                    width="36"
+                    height="36"
+                  />
+                  <span>0&degC</span>
+                  <p>Mounth</p>
+                </li>
+                <li class="week-item">
+                  <img
+                    src="./assets/icons/01n.png"
+                    alt="icons"
+                    width="36"
+                    height="36"
+                  />
+                  <span>0&degC</span>
+                  <p>Mounth</p>
+                </li>
+                <li class="week-item">
+                  <img
+                    src="./assets/icons/01n.png"
+                    alt="icons"
+                    width="36"
+                    height="36"
+                  />
+                  <span>0&degC</span>
+                  <p>Mounth</p>
+                </li>
+                <li class="week-item">
+                  <img
+                    src="./assets/icons/01n.png"
+                    alt="icons"
+                    width="36"
+                    height="36"
+                  />
+                  <span>0&degC</span>
+                  <p>Mounth</p>
+                </li>
+              </ul>
+            </section>
+          </div>
+          <div class="content-right">
+            <div class="content-main">
+              <h2>Todays Highlights</h2>
+              <div class="highlights">
+                <section class="air cards" id="air-card">
+                  <h4 class="air-title">Air Quality Index</h4>
+                  <ul class="air-list">
+                    <li class="air-item">
+                      <img src="./assets/wind.png" alt="air" width="40" />
+                    </li>
+                    <li class="air-item">
+                      <span>PM<sub>25</sub></span>
+                      <p id="air-pm">0.00</p>
+                    </li>
+                    <li class="air-item">
+                      <span>SO<sub>2</sub></span>
+                      <p id="air-so">0.00</p>
+                    </li>
+                    <li class="air-item">
+                      <span>NO<sub>2</sub></span>
+                      <p id="air-no">0.00</p>
+                    </li>
+                    <li class="air-item">
+                      <span>O<sub>3</sub></span>
+                      <p id="air-ozone">00.0</p>
+                    </li>
+                  </ul>
+                  <!-- <span class="badge aqi-1" title="aqi message" id="badge">Good</span> -->
+                </section>
+                <section class="sunrise-sunset cards">
+                  <h4>Sunrise and Sunset</h4>
+                  <div class="sunrise-sunset__wraper">
+                    <div class="sunrise">
+                      <ul class="sunrise-list list-flex__2">
+                        <li class="sunrise-item">
+                          <img
+                            src="./assets/sunrise.png"
+                            alt="sunrise"
+                            width="40"
+                          />
+                        </li>
+                        <li class="sunrise-item">
+                          <span>Sunrise</span>
+                          <p id="sunrise">0:00 AM</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="sunset">
+                      <ul class="sunset-list list-flex__2">
+                        <li class="sunset-item">
+                          <img
+                            src="./assets/sunset.png"
+                            alt="sunset"
+                            width="40"
+                          />
+                        </li>
+                        <li class="sunset-item">
+                          <span>Sunset</span>
+                          <p id="sunset">0:00 PM</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="highlights-wraper">
+                <section class="humiditi cards">
+                  <h4>Humiditi</h4>
+                  <ul class="humiditi-list list-flex">
+                    <li class="humiditi-item">
+                      <img
+                        src="./assets/humidity.png"
+                        alt="humiditi"
+                        width="40"
+                      />
+                    </li>
+                    <li class="humiditi-item" id="humidity">00%</li>
+                  </ul>
+                </section>
+                <section class="pressure cards">
+                  <h4>Pressure</h4>
+                  <ul class="pressure list-flex">
+                    <li class="pressure-item">
+                      <img
+                        src="./assets/pressure.png"
+                        alt="pressure"
+                        width="40"
+                      />
+                    </li>
+                    <li class="pressure-item" id="pressure">0000hPa</li>
+                  </ul>
+                </section>
+                <section class="visibility cards">
+                  <h4>Visibility</h4>
+                  <ul class="visibility-list list-flex">
+                    <li class="visibility-item">
+                      <img
+                        src="./assets/visibility.png"
+                        alt="visibility"
+                        width="40"
+                      />
+                    </li>
+                    <li class="visibility-item" id="visibility">0.0km</li>
+                  </ul>
+                </section>
+                <section class="fells-like cards">
+                  <h4>Fells like</h4>
+                  <ul class="fells__like-list list-flex">
+                    <li class="fells__like-item">
+                      <img
+                        src="./assets/thermometer.png"
+                        alt="thermometer"
+                        width="40"
+                      />
+                    </li>
+                    <li class="fells__like-item" id="fells__like">0&degC</li>
+                  </ul>
+                </section>
+              </div>
+            </div>
+            <div class="content-today">
+              <h2>Today at</h2>
+              <section class="card-today">
+                <ul class="card-today__list" id="today-list">
+                  <li class="card-today__item">
+                    <span>0 PM</span>
+                    <img src="./assets/icons/04d.png" alt="cloud" width="50" />
+                    <span>0&deg;C</span>
+                  </li>
+                  <li class="card-today__item">
+                    <span>0 PM</span>
+                    <img src="./assets/icons/04d.png" alt="cloud" width="50" />
+                    <span>0&deg;C</span>
+                  </li>
+                  <li class="card-today__item">
+                    <span>0 PM</span>
+                    <img src="./assets/icons/04d.png" alt="cloud" width="50" />
+                    <span>0&deg;C</span>
+                  </li>
+                  <li class="card-today__item">
+                    <span>0 PM</span>
+                    <img src="./assets/icons/04d.png" alt="cloud" width="50" />
+                    <span>0&deg;C</span>
+                  </li>
+                  <li class="card-today__item">
+                    <span>0 PM</span>
+                    <img src="./assets/icons/04d.png" alt="cloud" width="50" />
+                    <span>0&deg;C</span>
+                  </li>
+                  <li class="card-today__item">
+                    <span>0 PM</span>
+                    <img src="./assets/icons/04d.png" alt="cloud" width="50" />
+                    <span>0&deg;C</span>
+                  </li>
+                  <li class="card-today__item">
+                    <span>0 PM</span>
+                    <img src="./assets/icons/04d.png" alt="cloud" width="50" />
+                    <span>0&deg;C</span>
+                  </li>
+                  <li class="card-today__item">
+                    <span>0 PM</span>
+                    <img src="./assets/icons/04d.png" alt="cloud" width="50" />
+                    <span>0&deg;C</span>
+                  </li>
+                </ul>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>Created by Alexandru Cordunian</p>
+      </div>
+    </footer>
+
+    <script src="./js/switch.js"></script>
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>

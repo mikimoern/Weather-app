@@ -1,0 +1,10 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"); // стороннее обнуление
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;900&display=swap');
+@import "./utils/root"; // группировка сттилей (mixin, root)
+@import "./utils/base"; // собственное обнуление
+@import "./components/header"; 
+@import "./components/main";
+@import "./components/currentWeather";
+@import "./components/weekWeather";
+@import "./components/highlights";
+@import "./components/today";

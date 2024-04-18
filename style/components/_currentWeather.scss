@@ -1,0 +1,60 @@
+.current-weather {
+  width: 300px;
+  padding: 20px 30px;
+
+  border-radius: 28px;
+  background-color: var(--card-background);
+  line-height: 1.1;
+  transition: var(--transition-short);
+
+  h2 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  @include sm() {
+    width: 100%;
+  }
+}
+
+.current-weather:hover {
+  cursor: pointer;
+  background-color: var(--on-surface-variant);
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  p {
+    font-size: 52px;
+  }
+}
+
+.wrapper-line {
+  height: 1px;
+  margin: 15px 0;
+  background-color: var(--outline);
+}
+
+.card-info {
+  
+  li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+
+    span {
+      font-size: 14px;
+    }
+  }
+}
+
+.card-desc {
+  text-transform: capitalize;
+}
